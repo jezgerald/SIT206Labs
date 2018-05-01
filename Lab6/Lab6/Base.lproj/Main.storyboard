@@ -79,7 +79,7 @@
         <!--Tbl View Controller Trip Info-->
         <scene sceneID="dg1-F8-P3A">
             <objects>
-                <tableViewController id="7Ky-PP-CuQ" customClass="TblViewControllerTripInfo" customModule="Lab5" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tripInfo" id="7Ky-PP-CuQ" customClass="TblViewControllerTripInfo" customModule="Lab5" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fmv-Sz-nRz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
