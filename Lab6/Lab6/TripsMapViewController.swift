@@ -19,7 +19,6 @@ class TripsMapViewController: UIViewController, LocationObserver, MKMapViewDeleg
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         // set mapkitview delegate to the TripsMapViewController
         tripsMap.delegate = self
         

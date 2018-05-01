@@ -22,7 +22,6 @@ class TripAnnotation : NSObject, MKAnnotation {
         self.subtitle = "\(trip.tripDate)"
         self.coordinate = coordinate
         self.img = trip.img
-        
     }
     
 }

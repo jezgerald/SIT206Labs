@@ -26,7 +26,6 @@ class TblViewControllerTripInfo: UITableViewController {
     @IBOutlet weak var tripDuration: UITextField!
     @IBOutlet weak var tripLocation: UITextField!
     
-    
     @IBAction func saveTripInfo(_ sender: Any) {
         trip!.tripDate = Utilities.dateFormatter.date(from: tripDate.text!)!
         trip!.tripDuration = Int(tripDuration.text!)!

@@ -100,7 +100,6 @@ class Trips {
     }
     
     static func addTrip(destination : String, duration : Int16, date : String, img : UIImage) {
-        
     }
     
     static func getTrip(at : Int) -> Trip? {
