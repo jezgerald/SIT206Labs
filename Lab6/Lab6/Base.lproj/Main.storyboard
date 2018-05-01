@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TripsMap-->
+        <!--MapView-->
         <scene sceneID="SAJ-YC-Pkq">
             <objects>
                 <viewController id="BZ9-y6-fwC" customClass="TripsMapViewController" customModule="Lab5" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Wvf-4w-N65"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TripsMap" id="3KR-V6-jbm"/>
+                    <tabBarItem key="tabBarItem" title="MapView" id="3KR-V6-jbm"/>
                     <connections>
                         <outlet property="tripsMap" destination="dMz-Ac-v24" id="rHc-wW-a6d"/>
                     </connections>
@@ -35,7 +35,7 @@
             </objects>
             <point key="canvasLocation" x="-636" y="338.68065967016497"/>
         </scene>
-        <!--TripsList-->
+        <!--TableView-->
         <scene sceneID="6L0-Zi-uIL">
             <objects>
                 <tableViewController id="lFe-Ua-fvF" customClass="TblViewControllerTrips" customModule="Lab5" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,7 @@
                             <outlet property="delegate" destination="lFe-Ua-fvF" id="Waz-85-XCG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="TripsList" id="bmd-fT-Q3m"/>
+                    <tabBarItem key="tabBarItem" title="TableView" id="bmd-fT-Q3m"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1k-yt-B11" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,6 +211,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QpN-Ak-yUl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zcm-xv-3im">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50C6F3C120981BA700FE5D29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50C6F3C020981BA700FE5D29 /* Default-568h@2x.png */; };
+		50C6F3C920982C9900FE5D29 /* TripAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C6F3C820982C9900FE5D29 /* TripAnnotation.swift */; };
 		50FA35FA2095BFDE001F2876 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FA35F92095BFDE001F2876 /* MapKit.framework */; };
 		50FA35FC2095CA60001F2876 /* TripsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA35FB2095CA60001F2876 /* TripsMapViewController.swift */; };
 		DFB45BB22093FE6800BB4590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB45BB12093FE6800BB4590 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		50C6F3C020981BA700FE5D29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		50C6F3C820982C9900FE5D29 /* TripAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAnnotation.swift; sourceTree = "<group>"; };
 		50FA35F92095BFDE001F2876 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		50FA35FB2095CA60001F2876 /* TripsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsMapViewController.swift; sourceTree = "<group>"; };
 		DFB45BAE2093FE6800BB4590 /* Lab5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab5.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				DFBDC6042095861600B5CFA1 /* TblViewControllerTrips.swift */,
 				50FA35FB2095CA60001F2876 /* TripsMapViewController.swift */,
 				DFBDC6022095861600B5CFA1 /* Trip.swift */,
+				50C6F3C820982C9900FE5D29 /* TripAnnotation.swift */,
 				DFB45BB12093FE6800BB4590 /* AppDelegate.swift */,
 				DFB45BB32093FE6800BB4590 /* ViewController.swift */,
 				DFB45BB52093FE6800BB4590 /* Main.storyboard */,
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C6F3C920982C9900FE5D29 /* TripAnnotation.swift in Sources */,
 				50FA35FC2095CA60001F2876 /* TripsMapViewController.swift in Sources */,
 				DFBDC6052095861600B5CFA1 /* Trip.swift in Sources */,
 				DFB45BB42093FE6800BB4590 /* ViewController.swift in Sources */,

@@ -43,7 +43,7 @@ class TblViewControllerTrips: UITableViewController {
         // Configure the cell...
         cell.textLabel?.text = "\(Utilities.trips[indexPath.row].tripDestination), \(Utilities.trips[indexPath.row].tripDuration)"
         cell.detailTextLabel?.text = "\(Utilities.dateFormatter.string(from: Utilities.trips[indexPath.row].tripDate))"
-        cell.imageView?.image = Utilities.trips[indexPath.row].destinationImage
+        cell.imageView?.image = Utilities.trips[indexPath.row].img
         return cell
     }
     

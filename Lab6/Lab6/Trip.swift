@@ -14,32 +14,35 @@ import CoreData
 
 
 /*class Trip //: NSManagedObject, MKAnnotation
- {
- var tripDate : Date
- var tripDuration : Int
- var tripDestination : String
- var destinationImage : UIImage
- 
- init(date : Date, duration : Int, destination : String, img : UIImage)
- {
- self.tripDate = date
- self.tripDuration = duration
- self.tripDestination = destination
- self.destinationImage = img
+{
+     var tripDate : Date
+     var tripDuration : Int
+     var tripDestination : String
+     var destinationImage : UIImage
+
+    init(date : Date, duration : Int, destination : String, img : UIImage)
+     {
+        self.tripDate = date
+        self.tripDestination = destination
+        self.tripDuration = duration
+        self.destinationImage = img
+     }
+
+     var title : String?
+     var subTitle : String?
+     var coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+
+    /*
+     func getLocationFromDestination() {
+         CLGeocoder().geocodeAddressString(tripDestination!) {
+         (placemarks, error) in
+         let placemark = placemarks?.first
+         self.coordinate = (placemark?.location?.coordinate)!
+        }
+     }
+     */
  }
- 
- var title : String?
- var subTitle : String?
- var coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
- 
- func getLocationFromDestination() {
- CLGeocoder().geocodeAddressString(tripDestination!) {
- (placemarks, error) in
- let placemark = placemarks?.first
- self.coordinate = (placemark?.location?.coordinate)!
- }
- }
- }*/
+*/
 
 class Utilities {
     static var dateFormatter = DateFormatter()
@@ -112,11 +115,11 @@ class Trips {
         if trips.count == 0 {
             
             //Add a trip to Melbourne
-            trips.append ( Trip("Melbourne", 3 , "2018/10/10", UIImage(named : "Melbourne")!))
+            trips.append ( Trip(date: "18/10/10", duration: 3, destination: "Melbourne", img: UIImage(named : "melbourne")!))
             
-            trips.append ( Trip("Sydney", 13, "2018/08/10", UIImage(named : "Sydney")!))
+            trips.append ( Trip(date: "18/08/10", duration: 13, destination: "Sydney", img: UIImage(named : "sydney")!))
             
-            trips.append (Trip("Adelaide", 10, "2017/08/10", UIImage(named : "Adelaide")!))
+            trips.append (Trip(date: "17/08/10", duration: 10, destination: "Adelaide", img: UIImage(named : "adelaide")!))
             
         }
         

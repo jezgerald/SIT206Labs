@@ -13,11 +13,36 @@ class TripsMapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var tripsMap: MKMapView!
     
+    var trips = Trips.getTrips()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         tripsMap.delegate = self
+        tripsMap.showsUserLocation = true
+        
+        for trip in trips {
+            tripsMap.addAnnotation(trip)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        let pinIdentifier = "tripPin"
+        var pin = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdentifier)
+        
+        let trip = (annotation as! Trip)
+        if pin == nil {
+            pin = MKAnnotationView(annotation: annotation, reuseIdentifier: pinIdentifier)
+            
+            pin?.image = trip.img
+            pin?.canShowCallout = true
+        }
+        else {
+            pin?.annotation = annotation
+        }
+        return pin
     }
 
     override func didReceiveMemoryWarning() {
