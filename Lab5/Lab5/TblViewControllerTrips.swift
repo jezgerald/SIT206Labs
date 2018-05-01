@@ -47,7 +47,14 @@ class TblViewControllerTrips: UITableViewController {
         return cell
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueTripDetails" && self.tableView.indexPathForSelectedRow != nil {
+            (segue.destination as! TblViewControllerTripInfo).trip = Utilities.trips[self.tableView.indexPathForSelectedRow![0]]
+        }
+    }
+    @IBAction func unWindSegue(segue: UIStoryboardSegue) {
+        self.tableView.reloadData()
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

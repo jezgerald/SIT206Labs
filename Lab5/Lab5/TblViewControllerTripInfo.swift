@@ -54,9 +54,7 @@ class TblViewControllerTripInfo: UITableViewController {
     }
     
     
-    @IBAction func unWindSegue(segue: UIStoryboardSegue) {
-        self.tableView.reloadData()
-    }
+   
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
