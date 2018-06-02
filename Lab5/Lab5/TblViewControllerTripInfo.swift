@@ -28,14 +28,14 @@ class TblViewControllerTripInfo: UITableViewController {
     
     
     @IBAction func saveTripInfo(_ sender: Any) {
-        trip!.tripDate = Utilities.dateFormatter.date(from: tripDate.text!)!
+        trip!.tripDate = Utilities.dateFormat.date(from: tripDate.text!)!
         trip!.tripDuration = Int(tripDuration.text!)!
         trip!.tripDestination = tripLocation.text!
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if trip != nil {
-            tripDate.text = Utilities.dateFormatter.string(for: trip!.tripDate)
+            tripDate.text = Utilities.dateFormat.string(for: trip!.tripDate)
             tripLocation.text = trip!.tripDestination
             tripDuration.text = "\(trip!.tripDuration)"
         }
@@ -52,8 +52,6 @@ class TblViewControllerTripInfo: UITableViewController {
         }
         
     }
-    
-    
    
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
