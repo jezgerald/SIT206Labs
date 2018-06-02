@@ -8,47 +8,29 @@
 
 import Foundation
 import UIKit
-import CoreLocation
-import MapKit
-import CoreData
 
-
-class Trip //: NSManagedObject, MKAnnotation
-{
+class Trip {
     var tripDate : Date
     var tripDuration : Int
     var tripDestination : String
     var destinationImage : UIImage
     
-    init(date : Date, duration : Int, destination : String, img : UIImage)
-    {
+    init(date : Date, duration : Int, destination : String, img : UIImage) {
         self.tripDate = date
         self.tripDuration = duration
         self.tripDestination = destination
         self.destinationImage = img
     }
-    
-    var title : String?
-    var subTitle : String?
-    var coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-    
-    /*func getLocationFromDestination() {
-        CLGeocoder().geocodeAddressString(tripDestination!) {
-            (placemarks, error) in
-            let placemark = placemarks?.first
-            self.coordinate = (placemark?.location?.coordinate)!
-        }
-    }*/
 }
 
 class Utilities {
-    static var dateFormatter = DateFormatter()
+    static var dateFormat = DateFormatter()
     static var trips : [Trip] = []
     static func loadTrips() {
-        dateFormatter.dateFormat = "yy/mm/dd"
+        dateFormat.dateFormat = "yy/mm/dd"
         trips = [
-            Trip(date : dateFormatter.date(from : "17/04/24")!, duration : 2, destination : "Melbourne", img : UIImage(named: "melbourne")!),
-            Trip(date : dateFormatter.date(from : "17/05/24")!, duration : 2, destination : "Sydney", img : UIImage(named: "sydney")!)
+            Trip(date: dateFormat.date(from: "17/04/24")!, duration: 2, destination: "Melbourne", img: UIImage(named: "melbourne")!),
+            Trip(date: dateFormat.date(from: "18/04/20")!, duration: 3, destination: "Sydney", img: UIImage(named: "sydney")!)
         ]
     }
 }

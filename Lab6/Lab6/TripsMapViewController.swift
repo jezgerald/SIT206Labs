@@ -1,81 +1,95 @@
 //
 //  TripsMapViewController.swift
-//  Lab5
+//  Lab6
 //
-//  Created by Jessica Fitzgerald on 29/4/18.
+//  Created by Jessica Fitzgerald on 2/6/18.
 //  Copyright © 2018 Deakin. All rights reserved.
 //
 
 import UIKit
 import MapKit
 
-class TripsMapViewController: UIViewController, LocationObserver, MKMapViewDelegate {
+class TripsMapViewController: UIViewController, MKMapViewDelegate, LocationObserver {
 
     @IBOutlet weak var tripsMap: MKMapView!
     
-    var trips = Trips.getTrips()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        // set mapkitview delegate to the TripsMapViewController
-        tripsMap.delegate = self
         
-        //show the user's location
-        tripsMap.showsUserLocation = true
+        // load trips from Utilities class
+        Utilities.loadTrips()
         
-        // centre map around user location
+        // set mapkit delegate to the TripsMapViewController
+        self.tripsMap.delegate = self
+        
+        // centre the map around the user's current location
         tripsMap.setCenter(tripsMap.userLocation.coordinate, animated: true)
         
-        // add a pin for each trip
+        // register viewController with LocationService
+        LocationService.shared.registerLocationObserver(locationObserver: self)
+        
+        // Add a pin to the map for each trip
         for i in 0 ... Utilities.trips.count - 1 {
             let trip = Utilities.trips[i]
             
+            // CLGeocoder convers trip destination to coordinates
             CLGeocoder().geocodeAddressString(trip.tripDestination, completionHandler: { (placeMark, error) in
-                let tripLocation = placeMark![0].location?.coordinate
-                self.tripsMap.addAnnotation(TripAnnotation(tripID: i, trip: trip, coordinate: tripLocation!))
-                })
+            let tripLocation = placeMark![0].location?.coordinate
+            self.tripsMap.addAnnotation(TripAnnotation(tripID: i, trip: trip, coordinate: tripLocation!))
+            })
         }
-        
-        LocationService.shared.registerLocationObserver(locationObserver: self)
     }
     
     func locationDidChange(newLocations: [CLLocation]) {
         self.tripsMap.setCenter(newLocations[0].coordinate, animated: true)
     }
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+
+    func mapView(_ mapView : MKMapView, viewFor annotation : MKAnnotation) -> MKAnnotationView? {
+        // get ID of the annotationView
+        let reuseID = "tripAnnotation"
         
-        let pinIdentifier = "tripPin"
-        var pin = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdentifier)
+        // if the annotation to view is not TripAnnotation, don't continue
+        let tripAnnotation : TripAnnotation? = (annotation as? TripAnnotation)
+        if tripAnnotation == nil {
+            return nil
+        }
         
-        let trip = (annotation as! Trip)
-        if pin == nil {
-            pin = MKAnnotationView(annotation: annotation, reuseIdentifier: pinIdentifier)
+        // get a reusable AnnotationView item
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseID)
+        
+        // if nil, then it's the first time using this annotation
+        if annotationView == nil {
+            // create a new object, set the image, and add a button to show more details
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+            annotationView?.image = tripAnnotation?.img
             
-            pin?.image = trip.img
             let btn = UIButton(type: .detailDisclosure)
-            pin?.rightCalloutAccessoryView = btn
-            pin?.canShowCallout = true
+            annotationView?.rightCalloutAccessoryView = btn
+            annotationView?.canShowCallout = true
         }
         else {
-            pin?.annotation = annotation
+            annotationView!.annotation = tripAnnotation
         }
-        return pin
+        
+        return annotationView
     }
     
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let selectedTrip = Utilities.trips[ (view.annotation as! TripAnnotation).tripID]
+    func mapView (_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
-        let tripInfoVC = (self.storyboard?.instantiateInitialViewController(withIdentifier: "tripInfo") as! TblViewControllerTripInfo)
+        // get the selected annotationView, get the annotation included, and get the tripID
+        let selectedTrip = Utilities.trips[ (view.annotation as! TripAnnotation).tripID ]
         
+        // init the tripInfo viewController. TripInfo is the viewController ID so you need to select the trip info screen and set its identifier
+        let tripInfoVC = (self.storyboard?.instantiateViewController(withIdentifier: "tripInfo") as! TblViewControllerTripInfo)
+        
+        // no pass the selectTrip
         tripInfoVC.trip = selectedTrip
         
+        // show trip info screen
         self.present(tripInfoVC, animated: true, completion: nil)
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

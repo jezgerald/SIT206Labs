@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50C6F3C120981BA700FE5D29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50C6F3C020981BA700FE5D29 /* Default-568h@2x.png */; };
-		50C6F3C920982C9900FE5D29 /* TripAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C6F3C820982C9900FE5D29 /* TripAnnotation.swift */; };
-		50C6F3CB2098321400FE5D29 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C6F3CA2098321400FE5D29 /* LocationService.swift */; };
-		50FA35FA2095BFDE001F2876 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FA35F92095BFDE001F2876 /* MapKit.framework */; };
-		50FA35FC2095CA60001F2876 /* TripsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA35FB2095CA60001F2876 /* TripsMapViewController.swift */; };
+		506E8D4520C2654500B510B3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506E8D4420C2654500B510B3 /* MapKit.framework */; };
+		506E8D4720C265B300B510B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 506E8D4620C265B300B510B3 /* Default-568h@2x.png */; };
+		506E8D4920C2660B00B510B3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 506E8D4820C2660B00B510B3 /* Info.plist */; };
+		506E8D4B20C26BA900B510B3 /* TripsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E8D4A20C26BA900B510B3 /* TripsMapViewController.swift */; };
+		506E8D4D20C271E300B510B3 /* TripAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E8D4C20C271E300B510B3 /* TripAnnotation.swift */; };
+		506E8D4F20C27F7800B510B3 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E8D4E20C27F7800B510B3 /* LocationService.swift */; };
 		DFB45BB22093FE6800BB4590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB45BB12093FE6800BB4590 /* AppDelegate.swift */; };
 		DFB45BB42093FE6800BB4590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB45BB32093FE6800BB4590 /* ViewController.swift */; };
 		DFB45BB72093FE6800BB4590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB45BB52093FE6800BB4590 /* Main.storyboard */; };
@@ -23,18 +24,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50C6F3C020981BA700FE5D29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		50C6F3C820982C9900FE5D29 /* TripAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAnnotation.swift; sourceTree = "<group>"; };
-		50C6F3CA2098321400FE5D29 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
-		50FA35F92095BFDE001F2876 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		50FA35FB2095CA60001F2876 /* TripsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsMapViewController.swift; sourceTree = "<group>"; };
-		DFB45BAE2093FE6800BB4590 /* Lab5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		506E8D4420C2654500B510B3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		506E8D4620C265B300B510B3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		506E8D4820C2660B00B510B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		506E8D4A20C26BA900B510B3 /* TripsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsMapViewController.swift; sourceTree = "<group>"; };
+		506E8D4C20C271E300B510B3 /* TripAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAnnotation.swift; sourceTree = "<group>"; };
+		506E8D4E20C27F7800B510B3 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		DFB45BAE2093FE6800BB4590 /* Lab6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB45BB12093FE6800BB4590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFB45BB32093FE6800BB4590 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DFB45BB62093FE6800BB4590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFB45BB82093FE6800BB4590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFB45BBB2093FE6800BB4590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DFB45BBD2093FE6800BB4590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFBDC6022095861600B5CFA1 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		DFBDC6032095861600B5CFA1 /* TblViewControllerTripInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TblViewControllerTripInfo.swift; sourceTree = "<group>"; };
 		DFBDC6042095861600B5CFA1 /* TblViewControllerTrips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TblViewControllerTrips.swift; sourceTree = "<group>"; };
@@ -45,17 +46,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50FA35FA2095BFDE001F2876 /* MapKit.framework in Frameworks */,
+				506E8D4520C2654500B510B3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50FA35F82095BFDE001F2876 /* Frameworks */ = {
+		506E8D4320C2654500B510B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50FA35F92095BFDE001F2876 /* MapKit.framework */,
+				506E8D4420C2654500B510B3 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -63,18 +64,17 @@
 		DFB45BA52093FE6800BB4590 = {
 			isa = PBXGroup;
 			children = (
-				50C6F3CA2098321400FE5D29 /* LocationService.swift */,
-				50C6F3C020981BA700FE5D29 /* Default-568h@2x.png */,
+				506E8D4620C265B300B510B3 /* Default-568h@2x.png */,
 				DFB45BB02093FE6800BB4590 /* Lab6 */,
 				DFB45BAF2093FE6800BB4590 /* Products */,
-				50FA35F82095BFDE001F2876 /* Frameworks */,
+				506E8D4320C2654500B510B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		DFB45BAF2093FE6800BB4590 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFB45BAE2093FE6800BB4590 /* Lab5.app */,
+				DFB45BAE2093FE6800BB4590 /* Lab6.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,17 +82,18 @@
 		DFB45BB02093FE6800BB4590 /* Lab6 */ = {
 			isa = PBXGroup;
 			children = (
+				506E8D4820C2660B00B510B3 /* Info.plist */,
 				DFBDC6032095861600B5CFA1 /* TblViewControllerTripInfo.swift */,
 				DFBDC6042095861600B5CFA1 /* TblViewControllerTrips.swift */,
-				50FA35FB2095CA60001F2876 /* TripsMapViewController.swift */,
+				506E8D4A20C26BA900B510B3 /* TripsMapViewController.swift */,
 				DFBDC6022095861600B5CFA1 /* Trip.swift */,
-				50C6F3C820982C9900FE5D29 /* TripAnnotation.swift */,
 				DFB45BB12093FE6800BB4590 /* AppDelegate.swift */,
 				DFB45BB32093FE6800BB4590 /* ViewController.swift */,
 				DFB45BB52093FE6800BB4590 /* Main.storyboard */,
+				506E8D4E20C27F7800B510B3 /* LocationService.swift */,
+				506E8D4C20C271E300B510B3 /* TripAnnotation.swift */,
 				DFB45BB82093FE6800BB4590 /* Assets.xcassets */,
 				DFB45BBA2093FE6800BB4590 /* LaunchScreen.storyboard */,
-				DFB45BBD2093FE6800BB4590 /* Info.plist */,
 			);
 			path = Lab6;
 			sourceTree = "<group>";
@@ -100,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DFB45BAD2093FE6800BB4590 /* Lab5 */ = {
+		DFB45BAD2093FE6800BB4590 /* Lab6 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFB45BC02093FE6800BB4590 /* Build configuration list for PBXNativeTarget "Lab5" */;
+			buildConfigurationList = DFB45BC02093FE6800BB4590 /* Build configuration list for PBXNativeTarget "Lab6" */;
 			buildPhases = (
 				DFB45BAA2093FE6800BB4590 /* Sources */,
 				DFB45BAB2093FE6800BB4590 /* Frameworks */,
@@ -112,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = Lab5;
+			name = Lab6;
 			productName = Lab5;
-			productReference = DFB45BAE2093FE6800BB4590 /* Lab5.app */;
+			productReference = DFB45BAE2093FE6800BB4590 /* Lab6.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,7 +125,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Deakin;
 				TargetAttributes = {
 					DFB45BAD2093FE6800BB4590 = {
@@ -151,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DFB45BAD2093FE6800BB4590 /* Lab5 */,
+				DFB45BAD2093FE6800BB4590 /* Lab6 */,
 			);
 		};
 /* End PBXProject section */
@@ -162,8 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB45BBC2093FE6800BB4590 /* LaunchScreen.storyboard in Resources */,
-				50C6F3C120981BA700FE5D29 /* Default-568h@2x.png in Resources */,
+				506E8D4720C265B300B510B3 /* Default-568h@2x.png in Resources */,
 				DFB45BB92093FE6800BB4590 /* Assets.xcassets in Resources */,
+				506E8D4920C2660B00B510B3 /* Info.plist in Resources */,
 				DFB45BB72093FE6800BB4590 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,9 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50C6F3C920982C9900FE5D29 /* TripAnnotation.swift in Sources */,
-				50FA35FC2095CA60001F2876 /* TripsMapViewController.swift in Sources */,
-				50C6F3CB2098321400FE5D29 /* LocationService.swift in Sources */,
+				506E8D4D20C271E300B510B3 /* TripAnnotation.swift in Sources */,
+				506E8D4B20C26BA900B510B3 /* TripsMapViewController.swift in Sources */,
+				506E8D4F20C27F7800B510B3 /* LocationService.swift in Sources */,
 				DFBDC6052095861600B5CFA1 /* Trip.swift in Sources */,
 				DFB45BB42093FE6800BB4590 /* ViewController.swift in Sources */,
 				DFBDC6062095861600B5CFA1 /* TblViewControllerTripInfo.swift in Sources */,
@@ -222,6 +224,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -229,6 +232,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -279,6 +283,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -286,6 +291,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -321,9 +327,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24SM6522LU;
-				INFOPLIST_FILE = Lab5/Info.plist;
+				INFOPLIST_FILE = Lab6/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = deakin.Lab5;
+				PRODUCT_BUNDLE_IDENTIFIER = deakin.Lab6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,9 +342,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24SM6522LU;
-				INFOPLIST_FILE = Lab5/Info.plist;
+				INFOPLIST_FILE = Lab6/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = deakin.Lab5;
+				PRODUCT_BUNDLE_IDENTIFIER = deakin.Lab6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,7 +363,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFB45BC02093FE6800BB4590 /* Build configuration list for PBXNativeTarget "Lab5" */ = {
+		DFB45BC02093FE6800BB4590 /* Build configuration list for PBXNativeTarget "Lab6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFB45BC12093FE6800BB4590 /* Debug */,

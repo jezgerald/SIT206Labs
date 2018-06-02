@@ -17,6 +17,7 @@ class TblViewControllerTrips: UITableViewController {
         
         // push table view below the bar
         self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,8 +42,8 @@ class TblViewControllerTrips: UITableViewController {
 
         // Configure the cell...
         cell.textLabel?.text = "\(Utilities.trips[indexPath.row].tripDestination), \(Utilities.trips[indexPath.row].tripDuration)"
-        cell.detailTextLabel?.text = "\(Utilities.dateFormatter.string(from: Utilities.trips[indexPath.row].tripDate))"
-        cell.imageView?.image = Utilities.trips[indexPath.row].img
+        cell.detailTextLabel?.text = "\(Utilities.dateFormat.string(from: Utilities.trips[indexPath.row].tripDate))"
+        cell.imageView?.image = Utilities.trips[indexPath.row].destinationImage
         return cell
     }
     
@@ -51,9 +52,12 @@ class TblViewControllerTrips: UITableViewController {
             (segue.destination as! TblViewControllerTripInfo).trip = Utilities.trips[self.tableView.indexPathForSelectedRow![0]]
         }
     }
+    
     @IBAction func unWindSegue(segue: UIStoryboardSegue) {
+        performSegue(withIdentifier: "unWindSegue", sender: self)
         self.tableView.reloadData()
     }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
